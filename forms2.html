@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            font-size: 36px;
+        }
+        .input-field {
+            min-height: 40px;
+            font-size: 36px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" novalidate>
+        <fieldset>
+            <legend>User Data</legend>
+            <label for="user-name">User Name: </label>
+            <input list="names" type="text" id="user-name" name="user-name" class="input-field" placeholder="User Name"><br>
+            <datalist id="names">
+                <option value="Olha">OLHA</option>
+                <option value="Roman">ROMAN</option>
+                <option value="Jack">JACK</option>
+            </datalist>
+
+
+            <label for="user-email">Email: </label>
+            <input type="email" id="user-email" name="user-email" class="input-field" autofocus><br>
+            <!-- <input type="color" name="" id="">
+            <input type="date" name="" id="">
+            <input type="file" name="" id="">
+            <input type="range" name="" id=""> -->
+            <label for="user-pass">Password</label>
+            <input type="password" id="user-pass0" name="user-pass" class="input-field" maxlength="5"><br>
+        </fieldset>
+        <!-- Radio buttons -->
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="prog-land" value="html" checked><br>
+        <label for="css">CSS</label>
+        <input type="radio" id="css" name="prog-land" value="css"><br>
+        <label for="js">JavaScript</label>
+        <input type="radio" id="js" name="prog-land" value="js"><br>
+        <!-- Checkbox -->
+        <label for="newsletter">Receive news? </label>
+        <input type="checkbox" id="newsletter" name="newsletter"><br>
+        <label for="car-brend">Choose a car brand: </label><br>
+        <select name="car-brand" id="car-brand" class="input-field" size="3" multiple>
+            <optgroup label="German Cars">
+                <option value="bmw">BMW</option>
+                <option value="mb">Mercedes-Benz</option>
+                <option value="audi">Audi</option>
+            </optgroup><optgroup label="Jpan Cars">
+                <option value="honda">Honda</option>
+                <option value="nissan">Nissan</option>
+                <option value="subaru">Subaru</option>
+            </optgroup>
+        </select>
+        <label for="user-message">Enter yuor message: </label>
+        <textarea name="user-message" id="user-message" class="input-field" cols="30" rows="10"></textarea><br>
+        <input type="date" class="input-field" min="2022-09-26" max="2022-10-26"><br>
+        <input type="hidden" class="input-field" name="hidden" value="False"><br>
+        <input type="number" class="input-field" name="number"><br>
+        <button type="button" class="input-field" onclick="alert('Hello World!')">Alert</button>
+        <input type="reset" class="input-field" value="Clear Form">
+        <input type="submit" class="input-field" value="Click me!" disabled>
+    </form>
+</body>
+</html>
